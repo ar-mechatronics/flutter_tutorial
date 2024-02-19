@@ -16,6 +16,10 @@ class _MenuPageState extends State<MenuPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Menu'),
+        actions: [
+          IconButton(onPressed: () {}, icon: const Icon(Icons.refresh)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.share)),
+        ],
       ),
       body: Center(
         child: Text('Now on tab $_currentTab, menu $_currentMenu'),

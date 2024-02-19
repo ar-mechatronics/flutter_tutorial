@@ -62,7 +62,8 @@ class _FormPageState extends State<FormPage> {
                   decoration: const InputDecoration(
                     labelText: 'Date of birth',
                     prefixIcon: Icon(Icons.cake),
-                    hintText: 'Enter your date of birth',
+                    hintText: 'Select your date of birth',
+                    helperText: 'Tap to open date picker',
                   ),
                   readOnly: true,
                   onTap: () async {
@@ -90,6 +91,12 @@ class _FormPageState extends State<FormPage> {
                 DropdownMenuItem(value: 'F', child: Text('Female'))
               ],
               onChanged: (value) {},
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Select one item';
+                }
+                return null;
+              },
               onSaved: (value) => _input['gender'] = value!,
             ),
             const SizedBox(height: 16),
