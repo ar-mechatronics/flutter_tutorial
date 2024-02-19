@@ -5,6 +5,14 @@ class ChartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Chart'),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: [],
+      ),
+    );
   }
 }
