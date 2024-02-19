@@ -21,7 +21,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Tutorial',
       theme: ThemeData.from(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+        useMaterial3: true,
+      ).copyWith(
+        inputDecorationTheme: const InputDecorationTheme(
+          filled: true,
+          alignLabelWithHint: true,
+        ),
       ),
       routes: {
         '/': (context) => const HomePage(),
