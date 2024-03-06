@@ -11,7 +11,29 @@ class CRUDPage extends StatelessWidget {
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
-        children: [],
+        children: [
+          Wrap(
+            spacing: 8,
+            children: [
+              ActionChip(
+                label: const Text('Create'),
+                onPressed: () {},
+              ),
+              ActionChip(
+                label: const Text('Read'),
+                onPressed: () {},
+              ),
+              ActionChip(
+                label: const Text('Update'),
+                onPressed: () {},
+              ),
+              ActionChip(
+                label: const Text('Delete'),
+                onPressed: () {},
+              )
+            ],
+          )
+        ],
       ),
     );
   }
